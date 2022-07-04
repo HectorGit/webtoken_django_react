@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import useAxios from "../utils/useAxios";
+import DeskData from "../components/DeskData";
 
 function ProtectedPage() {
   const [res, setRes] = useState("");
@@ -22,6 +23,7 @@ function ProtectedPage() {
     <div>
       <h1>Projected Page</h1>
       <p>{res}</p>
+      <DeskData/>
     </div>
   );
 }
