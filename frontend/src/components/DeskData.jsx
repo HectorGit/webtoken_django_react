@@ -63,9 +63,10 @@ function DeskData() {
                     obj.date = moment(obj.date).format('YYYY-MM-DD')
                     obj.primary_key = obj.user_id + obj.date + obj.timestamp
                     // console.log('object is : ' + obj)
+                    console.log(obj)
                     axios({
                         method: "POST",
-                        url:"/deskdata/0/",
+                        url:"http://localhost:8000/deskdata/0/",
                         data: obj
                     })
                     // if (i===20) {
@@ -86,7 +87,7 @@ function DeskData() {
         event.preventDefault()
         axios({
             method: "GET",
-            url: "/deskdata/" + sergioUserID,
+            url: "http://localhost:8000/deskdata/" + sergioUserID + "/",
         }).then((response)=>{
             const data = response.data
 
