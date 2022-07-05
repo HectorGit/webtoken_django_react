@@ -65,7 +65,7 @@ function DeskData() {
                     // console.log('object is : ' + obj)
                     axios({
                         method: "POST",
-                        url:"/desk_data/0/",
+                        url:"/deskdata/0/",
                         data: obj
                     })
                     // if (i===20) {
@@ -86,7 +86,7 @@ function DeskData() {
         event.preventDefault()
         axios({
             method: "GET",
-            url: "/desk_data/" + sergioUserID,
+            url: "/deskdata/" + sergioUserID,
         }).then((response)=>{
             const data = response.data
 

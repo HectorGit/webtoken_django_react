@@ -7,4 +7,6 @@ from django.views.generic import TemplateView #attempting to set up the default 
 urlpatterns = [
     path('fetch_user_data_insecure', views.fetch_user_data_insecure, name='fetch_user_data_insecure'),
     path('fetch_user_data_secure', views.fetch_user_data_secure, name='fetch_user_data_secure'), 
+    path("<int:id>/", views.deskUserData, name="deskUserData"),
+
 ]
